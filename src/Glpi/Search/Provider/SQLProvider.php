@@ -9,6 +9,7 @@
  *
  * @copyright 2015-2025 Teclib' and contributors.
  * @copyright 2003-2014 by the INDEPNET Development Team.
+ * @copyright 2025 Kyndryl Inc.
  * @licence   https://www.gnu.org/licenses/gpl-3.0.html
  *
  * ---------------------------------------------------------------------
@@ -1331,6 +1332,10 @@ final class SQLProvider implements SearchProviderInterface
                 } else {
                     $SEARCH = null;
                 }
+                break;
+            
+            case "matches":
+                $SEARCH = [$nott ? "<>" : "=", $val];
                 break;
         }
 
