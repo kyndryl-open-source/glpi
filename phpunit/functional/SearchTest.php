@@ -3051,7 +3051,7 @@ class SearchTest extends DbTestCase
         return $searchable_classes;
     }
 
-    public static function namesOutputProvider(): array
+    public static function testNamesOutputProvider(): array
     {
         return [
             [
