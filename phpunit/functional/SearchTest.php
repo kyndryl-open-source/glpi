@@ -6203,7 +6203,7 @@ class DupSearchOpt extends CommonDBTM
     }
 }
 
-// phpcs:ignore SlevomatCodingStandard.Namespaces	
+// phpcs:ignore SlevomatCodingStandard.Namespaces
 
 namespace SearchTest;
 
