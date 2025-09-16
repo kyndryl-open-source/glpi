@@ -6131,8 +6131,6 @@ class SearchTest extends DbTestCase
             ['name' => 'appliance1', 'entities_id' => $root],
             ['name' => 'appliance2', 'entities_id' => $root],
         ]);
-        // phpcs:ignore SlevomatCodingStandard.Namespaces	
-
 
         $this->createItems(Appliance_Item::class, [
             ['items_id' => $computer_appliance_1->getID(), 'appliances_id' => $appliance1->getID(), 'itemtype' => Computer::class],
@@ -6204,6 +6202,7 @@ class DupSearchOpt extends CommonDBTM
         return $tab;
     }
 }
+// phpcs:ignore SlevomatCodingStandard.Namespaces	
 
 namespace SearchTest;
 
