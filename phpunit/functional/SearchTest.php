@@ -541,7 +541,7 @@ class SearchTest extends DbTestCase
         );
     }
 
-    public static function viewCriterionProvider(): array
+    public static function testViewCriterionProvider(): array
     {
         return [
             [
@@ -739,7 +739,7 @@ class SearchTest extends DbTestCase
         ];
     }
 
-    #[DataProvider('viewCriterionProvider')]
+    #[DataProvider('testViewCriterionProvider')]
     public function testViewCriterionNew(string $itemtype, array $criteria, int $expected)
     {
         $data = $this->doSearch($itemtype, [
@@ -3095,7 +3095,7 @@ class SearchTest extends DbTestCase
         ];
     }
 
-    #[DataProvider('namesOutputProvider')]
+    #[DataProvider('testNamesOutputProvider')]
     public function testNamesOutput(array $params, array $expected)
     {
         $this->login();
@@ -6131,6 +6131,8 @@ class SearchTest extends DbTestCase
             ['name' => 'appliance1', 'entities_id' => $root],
             ['name' => 'appliance2', 'entities_id' => $root],
         ]);
+        // phpcs:ignore SlevomatCodingStandard.Namespaces	
+
 
         $this->createItems(Appliance_Item::class, [
             ['items_id' => $computer_appliance_1->getID(), 'appliances_id' => $appliance1->getID(), 'itemtype' => Computer::class],
