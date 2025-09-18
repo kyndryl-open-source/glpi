@@ -2755,7 +2755,9 @@ class SearchTest extends DbTestCase
         if ($meta) {
             return; // Do not know how to run search on meta here
         }
+        print_r($searchtype);
 
+        
         $search_params = [
             'is_deleted'   => 0,
             'start'        => 0,
